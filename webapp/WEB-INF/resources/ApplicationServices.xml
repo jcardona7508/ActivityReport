@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RegisteredClasses>
+<RegisteredClass name="ApplicationService" class="com.gausssoft.service.Service" singleton="true"/>
+</RegisteredClasses>
+

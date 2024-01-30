@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="ActivityReport">
+        <wb-resource deploy-path="/" source-path="/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/resources" source-path="/webapp/WEB-INF/resources"/>
+        <wb-resource deploy-path="/WEB-INF/config" source-path="/webapp/WEB-INF/config"/>
+        <wb-resource deploy-path="/jsp" source-path="/webapp/jsp"/>
+                
+        <property name="context-root" value="ActivityReport"/>
+                
+        <property name="java-output-path" value="/ActivityReport/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>

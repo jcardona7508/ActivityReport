@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mappings>
+	<application-mappings name = "ActivityRecordEngine" >     
+		<application-map>
+			<command-name>default</command-name> 
+			<class-name>common.engine.action.DefaultHandler</class-name>
+		 </application-map>
+		    
+		<application-map>
+			<command-name>userEvent</command-name> 
+			<class-name>activityrecord.engine.action.UserEventHandler</class-name>
+		</application-map>
+
+		<application-map>
+			<command-name>sqlEvent</command-name> 
+			<class-name>activityrecord.engine.action.SqlEventHandler</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>updateRactEvent</command-name> 
+			<class-name>activityrecord.engine.action.UpdateRactEventHandler</class-name>
+		</application-map>
+			
+		<application-map>
+			<command-name>getResource</command-name> 
+			<class-name>activityrecord.engine.action.GetResourceModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getWeekSummary</command-name> 
+			<class-name>activityrecord.engine.action.WeekSummaryModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>duplicate</command-name> 
+			<class-name>activityrecord.engine.action.DuplicateModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getActivities</command-name> 
+			<class-name>activityrecord.engine.action.GetActivitiesModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getResourceActivities</command-name> 
+			<class-name>activityrecord.engine.action.GetActivityChoicesModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getResources</command-name> 
+			<class-name>activityrecord.engine.action.GetResourcesChoicesModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getActivityObjects</command-name> 
+			<class-name>activityrecord.engine.action.GetObjectChoicesModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getObjectDetails</command-name> 
+			<class-name>activityrecord.engine.action.GetDetailChoicesModelAction</class-name>
+		</application-map>		
+		
+		<application-map>
+			<command-name>addActivities</command-name> 
+			<class-name>activityrecord.engine.action.AddActivitiesModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>addObjects</command-name> 
+			<class-name>activityrecord.engine.action.AddObjectsModelAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>addDetails</command-name> 
+			<class-name>activityrecord.engine.action.AddDetailsModelAction</class-name>
+		</application-map>
+		
+	</application-mappings>
+</mappings>

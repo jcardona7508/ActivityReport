@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : StandardFrontController.xml
+    Created on : 14/03/2017
+    Author     : JEC
+    Description:
+        Purpose of the document follows.
+-->
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="processorClassName">StandardCommandProcessor</entry>
+<entry key="processorConfigurationFile">CommandProcessor.xml</entry>
+<entry key="actionMappings">ActionMappings.xml</entry>
+</properties>

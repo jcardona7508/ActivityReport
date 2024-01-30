@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+	<mapping name="logout">		
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="start">
+		<action name="Success" type="redirect" page="/activityreportdoc/index.html"/>
+		<action name="Fail" type="redirect" page="/activityreportdoc/loginConfiguration.html"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="login">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.LoginAction"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>	
+	<mapping name="getResources">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getResourceActivities">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getResActivities">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>	
+	<mapping name="getActivityObjects">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>	
+	<mapping name="getObjectDetail">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>	
+	<mapping name="saveActivities">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getImage">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.GetImageAction"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getMapImage">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getProjects">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getProjectActivities">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="saveProyectPriceActivities">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="copyProyectPrice">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="uploadLogo">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getLogoImage">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.GetLogoImageAction"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getLDAPAuthenticationActive">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getSummary">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+	<mapping name="getImageTO">
+		<action name="Success" type="standard" action="com.gausssoft.web.action.Action"/>
+		<action name="Fail" type="standard" action="com.gausssoft.web.action.Fail"/>
+		<action name="Exception" type="standard" action="com.gausssoft.web.action.Exception"/>
+	</mapping>
+</mappings>

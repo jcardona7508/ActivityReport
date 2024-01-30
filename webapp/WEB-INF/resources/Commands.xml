@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : CloudLicensingCommands.xml
+    Created on : 07/06/2017
+    Author     : JECM
+    Description: Commands mapping file.
+-->
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="start">com.gausssoft.commands.Start</entry>
+<entry key="login">com.gausssoft.commands.UserLogin</entry>
+<entry key="logOut">com.gausssoft.security.commands.UserLogOut</entry>
+<entry key="getResources">com.gausssoft.commands.GetResourcesList</entry>
+<entry key="getResourceActivities">com.gausssoft.commands.GetResourcesActivities</entry>
+<entry key="getResActivities">com.gausssoft.commands.GetResActivities</entry>
+<entry key="getActivityObjects">com.gausssoft.commands.GetActivityObjects</entry>
+<entry key="getObjectDetail">com.gausssoft.commands.GetObjectDetail</entry>
+<entry key="saveActivities">com.gausssoft.commands.SaveActivities</entry>
+<entry key="getImage">com.gausssoft.commands.GetImage</entry>
+<entry key="getMapImage">com.gausssoft.commands.GetMapImage</entry>
+<entry key="getProjects">com.gausssoft.commands.GetProjects</entry>
+<entry key="getProjectActivities">com.gausssoft.commands.GetProjectActivities</entry>
+<entry key="saveProyectPriceActivities">com.gausssoft.commands.SaveProyectPriceActivities</entry>
+<entry key="copyProyectPrice">com.gausssoft.commands.CopyProyectPrice</entry>
+<entry key="uploadLogo">com.gausssoft.commands.UploadLogo</entry>
+<entry key="getLogoImage">com.gausssoft.commands.GetLogoImage</entry>
+<entry key="getLDAPAuthenticationActive">com.gausssoft.commands.GetLDAPAuthenticationActive</entry>
+<entry key="getSummary">com.gausssoft.commands.GetSummary</entry>
+<entry key="getImageTO">com.gausssoft.commands.GetImageTO</entry>
+</properties>

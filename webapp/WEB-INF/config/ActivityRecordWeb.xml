@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XMLProperties>
+	<property>
+		<name>DatabaseAlias</name>
+		<value>activityrecord</value>
+	</property>
+	
+	<property>
+		<name>ApplicationProcessor</name>
+		<value>siscorp.framework.application.web.WebProcessor</value>
+	</property>
+	
+	<property>
+		<name>ApplicationMappings</name>
+		<value>ActivityRecordMappings</value>
+	</property>
+	
+	<property>
+		<name>ViewManager</name>
+		<value>siscorp.framework.application.web.HtmlViewManager</value>
+	</property>
+	
+	<property>
+		<name>DisplayDateFormat</name>
+		<value>dd/MM/yyyy</value>
+	</property>
+	
+</XMLProperties>

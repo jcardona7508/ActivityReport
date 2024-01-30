@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XMLProperties>
+	<property>
+		<name>ModelName</name>
+		<value>ActivityRecordEngine</value>
+	</property>
+	
+	<property>
+		<name>ModelMappingsFile</name>
+		<value>ActivityRecordEngineMappings.xml</value>
+	</property>
+	
+	<property>
+		<name>ComponentManagerProperties</name>
+		<value>ActivityRecordComponentManager.xml</value>
+	</property>
+	
+	<property>
+		<name>SqlManagerProperties</name>
+		<value>SqlManager.xml</value>
+	</property>	
+</XMLProperties>
