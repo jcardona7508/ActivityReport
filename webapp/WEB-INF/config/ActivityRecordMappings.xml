@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mappings>
+	<application-mappings name = "ActivityRecordWeb" >
+		<application-map>
+			<command-name>default</command-name> 
+			<class-name>common.web.action.DefaultAction</class-name>
+			<screen-name>common.web.view.GenericHtmlView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>start</command-name> 
+			<class-name>common.web.action.StartAction</class-name>
+			<screen-name>activityrecord.web.view.user.StartView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>init</command-name> 
+			<class-name>activityrecord.web.action.InitAction</class-name>
+			<screen-name>common.web.view.GenericHtmlView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>open</command-name> 
+			<class-name>common.web.action.OpenAction</class-name>
+			<screen-name>activityrecord.web.view.user.OpenView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>main</command-name> 
+			<class-name>activityrecord.web.action.MainAction</class-name>
+			<screen-name>activityrecord.web.view.MainView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>login</command-name> 
+			<class-name>common.web.action.user.LoginAction</class-name>
+			<screen-name>common.web.view.user.LoginView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>configLogin</command-name> 
+			<class-name>common.web.action.user.LoginConfigurationAction</class-name>
+			<screen-name>activityrecord.web.view.user.LoginConfigurationView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>checkConfigLogin</command-name> 
+			<class-name>activityrecord.web.action.CheckConfigLoginAction</class-name>						
+			<screen-name>activityrecord.web.view.user.CheckConfigLoginView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>showConfig</command-name> 
+			<class-name>activityrecord.web.action.ShowConfigAction</class-name>						
+			<screen-name>activityrecord.web.view.user.ShowConfigView</screen-name>
+		</application-map>		
+		
+		<application-map>
+			<command-name>installApp</command-name> 
+			<class-name>activityrecord.web.action.InstallApplicationAction</class-name>						
+			<screen-name>activityrecord.web.view.user.ShowInstallConfigView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>unInstallApp</command-name> 
+			<class-name>activityrecord.web.action.UnInstallApplicationAction</class-name>						
+			<screen-name>activityrecord.web.view.user.ShowInstallConfigView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>testDB</command-name> 
+			<class-name>activityrecord.web.action.TestDBAction</class-name>						
+			<screen-name>activityrecord.web.view.user.ShowInstallConfigView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>testAuthConfig</command-name> 
+			<class-name>activityrecord.web.action.AuthenticationTestAction</class-name>						
+			<screen-name>activityrecord.web.view.user.ShowConfigView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getProyectActivities</command-name> 
+			<class-name>activityrecord.web.action.GetProyectActivitiesAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>saveProyectPriceActivities</command-name> 
+			<class-name>activityrecord.web.action.SaveProyectPriceActivitiesAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>copyProyectPriceActivities</command-name> 
+			<class-name>activityrecord.web.action.CopyProyectPriceActivitiesAction</class-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>execSP</command-name> 
+			<class-name>activityrecord.web.action.ExecSP</class-name>
+		</application-map>		
+		
+		<application-map>
+			<command-name>autoLogin</command-name> 
+			<class-name>activityrecord.web.action.AutoLoginAction</class-name>
+			<screen-name>activityrecord.web.view.MainView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>calendar</command-name> 
+			<class-name>activityrecord.web.action.CalendarAction</class-name>
+			<screen-name>activityrecord.web.view.CalendarView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>home</command-name> 
+			<class-name>activityrecord.web.action.HomeAction</class-name>
+			<screen-name>activityrecord.web.view.HomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>promptResource</command-name> 
+			<class-name>activityrecord.web.action.PromptResourceAction</class-name>
+			<screen-name>activityrecord.web.view.PromptResourceView</screen-name>
+		</application-map>
+		
+	   <application-map>
+			<command-name>getResource</command-name> 
+			<class-name>activityrecord.web.action.GetResourceAction</class-name>
+			<screen-name>activityrecord.web.view.HomeView</screen-name>
+		</application-map>
+		
+		 <application-map>
+			<command-name>weekSummary</command-name> 
+			<class-name>activityrecord.web.action.WeekSummaryAction</class-name>
+			<screen-name>activityrecord.web.view.HeaderView</screen-name>
+		</application-map>
+		
+	    <application-map>
+			<command-name>getImage</command-name> 
+			<class-name>activityrecord.web.action.GetImageAction</class-name>
+			<screen-name>activityrecord.web.view.ImageView</screen-name>
+		</application-map>
+		
+	   <application-map>
+			<command-name>getActivities</command-name> 
+			<class-name>activityrecord.web.action.GetActivitiesAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+  	   <application-map>
+			<command-name>getHeader</command-name> 
+			<class-name>activityrecord.web.action.HeaderAction</class-name>
+			<screen-name>activityrecord.web.view.HeaderView</screen-name>
+		</application-map>
+		
+    	<application-map>
+			<command-name>getActivityDetail</command-name> 
+			<class-name>activityrecord.web.action.DetailAction</class-name>
+			<screen-name>activityrecord.web.view.DetailView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>updateract</command-name> 
+			<class-name>activityrecord.web.action.UpdateAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>changeMode</command-name> 
+			<class-name>activityrecord.web.action.ChangeModeAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		
+		<application-map>
+			<command-name>nextday</command-name> 
+			<class-name>activityrecord.web.action.NextDayAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>backday</command-name> 
+			<class-name>activityrecord.web.action.BackDayAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>nextweek</command-name> 
+			<class-name>activityrecord.web.action.NextWeekAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>backweek</command-name> 
+			<class-name>activityrecord.web.action.BackWeekAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>nextmonth</command-name> 
+			<class-name>activityrecord.web.action.NextMonthAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>backmonth</command-name> 
+			<class-name>activityrecord.web.action.BackMonthAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>goToDate</command-name> 
+			<class-name>activityrecord.web.action.GoToDateAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>duplicate</command-name> 
+			<class-name>activityrecord.web.action.DuplicateAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getActivityChoices</command-name> 
+			<class-name>activityrecord.web.action.GetActivityChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicerView</screen-name>
+		</application-map>
+
+		<application-map>
+			<command-name>getObjectChoices</command-name> 
+			<class-name>activityrecord.web.action.GetObjectChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicerView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getDetailChoices</command-name> 
+			<class-name>activityrecord.web.action.GetDetailChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicerView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>getChoices</command-name> 
+			<class-name>activityrecord.web.action.GetChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicesView</screen-name>
+		</application-map>	
+		
+		<application-map>
+			<command-name>getResourcesChoices</command-name> 
+			<class-name>activityrecord.web.action.GetResourcesChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicerView</screen-name>
+		</application-map>	
+		
+		<application-map>
+			<command-name>searchResource</command-name> 
+			<class-name>activityrecord.web.action.GetResourcesChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicesView</screen-name>
+		</application-map>	
+		
+   	    <application-map>
+			<command-name>searchActivities</command-name> 
+			<class-name>activityrecord.web.action.GetActivityChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicesView</screen-name>
+		</application-map>
+		
+  	    <application-map>
+			<command-name>searchObjects</command-name> 
+			<class-name>activityrecord.web.action.GetObjectChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicesView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>searchDetails</command-name> 
+			<class-name>activityrecord.web.action.GetDetailChoicesAction</class-name>
+			<screen-name>activityrecord.web.view.ChoicesView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>addResource</command-name> 
+			<class-name>activityrecord.web.action.AddResourceAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>	
+		
+		<application-map>
+			<command-name>addActivities</command-name> 
+			<class-name>activityrecord.web.action.AddActivitiesAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>	
+		
+		<application-map>
+			<command-name>addObjects</command-name> 
+			<class-name>activityrecord.web.action.AddObjectsAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>			
+		
+		<application-map>
+			<command-name>addDetails</command-name> 
+			<class-name>activityrecord.web.action.AddDetailsAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>logout</command-name> 
+			<class-name>common.web.action.user.LogOutAction</class-name>
+			<screen-name>activityrecord.web.view.user.LogOutView</screen-name>
+		</application-map>		
+	
+		
+		<application-map>
+			<command-name>close</command-name> 
+			<class-name>common.web.action.CloseAction</class-name>
+			<screen-name>common.web.view.GenericHtmlView</screen-name>
+		</application-map>
+				
+		<application-map>
+			<command-name>changelanguage</command-name> 
+			<class-name>activityrecord.web.action.ChangeLanguageAction</class-name>
+			<screen-name>activityrecord.web.view.MainView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>sqllistgroup</command-name> 
+			<class-name>activityrecord.web.action.SqlListGroupAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlListGroupView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>sqllist</command-name> 
+			<class-name>activityrecord.web.action.SqlListAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlListView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>editsql</command-name> 
+			<class-name>activityrecord.web.action.SqlEditAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlEditView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>updatesql</command-name> 
+			<class-name>activityrecord.web.action.SqlUpdateAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlListView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>addsql</command-name> 
+			<class-name>activityrecord.web.action.SqlAddAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlEditView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>savesql</command-name> 
+			<class-name>activityrecord.web.action.SqlSaveAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlListView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>deletesql</command-name> 
+			<class-name>activityrecord.web.action.SqlDeleteAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlListView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>probesql</command-name> 
+			<class-name>activityrecord.web.action.SqlProbeAction</class-name>
+			<screen-name>activityrecord.web.view.user.SqlEditView</screen-name>
+		</application-map>
+		
+		 <application-map>
+			<command-name>ract</command-name> 
+			<class-name>activityrecord.web.action.FechaAction</class-name>
+			<screen-name>activityrecord.web.view.FechaView</screen-name>
+		</application-map>
+				
+    	<application-map>
+			<command-name>updateweekract</command-name> 
+			<class-name>activityrecord.web.action.UpdateAction</class-name>
+			<screen-name>activityrecord.web.view.RactWeekView</screen-name>
+		</application-map>		
+		
+		<application-map>
+			<command-name>weekract</command-name> 
+			<class-name>activityrecord.web.action.SemRactAction</class-name>
+			<screen-name>activityrecord.web.view.RactWeekView</screen-name>
+		</application-map>				
+				
+		<application-map>
+			<command-name>gotoday</command-name> 
+			<class-name>activityrecord.web.action.GoToDateAction</class-name>
+			<screen-name>activityrecord.web.view.DateView</screen-name>
+		</application-map>
+		
+		<application-map>
+			<command-name>loadActivities</command-name> 
+			<class-name>activityrecord.web.action.LoadActivitiesAction</class-name>
+			<screen-name>activityrecord.web.view.RefreshHomeView</screen-name>
+		</application-map>
+
+		<application-map>
+			<command-name>help</command-name> 
+			<class-name>activityrecord.web.action.HelpAction</class-name>
+			<screen-name>activityrecord.web.view.HelpView</screen-name>
+		</application-map>
+										
+</application-mappings>
+</mappings>

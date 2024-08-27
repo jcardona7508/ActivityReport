@@ -1,0 +1,289 @@
+<%@ page import="siscorp.framework.application.EventResponse, 
+	    common.web.ClientInfo,
+	    common.util.ResourceString,
+	    siscorp.framework.application.ResourceManager,
+	    common.web.service.LDAPAuthenticationService"%> 
+<%
+    response.addHeader("Cache-Control","no-cache");
+    response.addHeader("Cache-Control","no-store");
+    
+	EventResponse eventResponse; 
+	String message;
+	ClientInfo clientInfo;
+	int screenWidth;
+	ResourceString localeTexts;
+	String language;
+    String contextPath = "/ActivityReport";
+    ResourceManager webResource;
+    LDAPAuthenticationService authService;
+%>
+
+<%
+    localeTexts = (ResourceString) session.getAttribute("RESOURCESTRING");
+	webResource = (ResourceManager) session.getAttribute("WEB_RESOURCE");
+    language = (String) session.getAttribute("language");
+    if (language == null)
+	language = "EN";    // english
+
+    contextPath = request.getContextPath();
+    authService= new LDAPAuthenticationService(webResource);
+%>
+<html>
+<head>
+    <title><%=localeTexts.getString("application.title")%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="/activityreportdoc/css/estilogauss1024.css" type="text/css">
+    <link rel="stylesheet" href="/activityreportdoc/css/estilogauss.css" type="text/css">
+    <script type="text/javascript" language="JavaScript1.3" src="/activityreportdoc/js/languages.js"></script>
+    <script type="text/javascript" language="JavaScript1.3">CurrentLang=<%=localeTexts.getString("javascriptLocale")%>;</script>
+    <script type="text/javascript" language="JavaScript1.3" src="/activityreportdoc/js/utils.js"></script>
+    <script type="text/javascript" language="JavaScript1.3">
+	var changePass;
+<%
+if ( (request.getParameter("changePassword")!=null)&&(request.getParameter("changePassword").equals("true")) )
+{
+%>	
+	changePass = 'true';
+<%
+}
+else
+{
+%>
+	changePass = 'false';
+<%
+}
+%>
+function doOk( form )
+{	
+	form.action.value = "login";
+	submitForm( form );
+}
+function doChangeLanguage( form )
+{	
+	form.action.value = "changelanguage";
+	submitForm( form );
+}
+function doCancel( form )
+{
+	form.action.value = "logout";
+	submitForm( form );
+}
+function submitForm( form )
+{ 
+	form.submit();
+}
+function doocultar(Seccion,key, form)
+{
+	form.changePassword.value = "true";
+	Seccion.style.visibility="visible";
+	key.style.visibility="hidden";
+}
+function init( Seccion,key, form )
+{
+	if (changePass == 'true')
+	{
+		doocultar( Seccion,key, form );
+	}
+}
+ns = (Name()=='Netscape')?true:false
+function pressEnter(e) {
+	if( ns )
+	{
+		if(e.which == 13 )
+		{
+			doOk(document.forms['login']);
+		}
+	}
+	else
+	{
+		if( window.event.keyCode == 13 )
+		{
+			doOk(document.forms['login']);
+		}	
+	}
+}
+if( ns )
+document.captureEvents(Event.KEYPRESS);
+document.onkeypress = pressEnter;
+</script>
+<link rel="shortcut icon" href="/activityreportdoc/images/favicon.ico" >
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" class="bb" onLoad="init(document.getElementById('seccion'),document.getElementById('key'),document.forms['login'])">
+
+    <form name="login" method="post" action="<%=contextPath%>/do/login" autocomplete="off">
+ 	<input type="hidden" name="action" value="login">
+	<input type="hidden" name="changePassword" value="false">
+	<input type="hidden" name="language" value="false">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="c">
+  <tr>
+      <td width="28%" class="p" >&nbsp;</td>
+      <td width="71%" class="p" >&nbsp;</td>
+      <td width="1%" class="p" >&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="71%"> 
+        <table width="53%" border="0" cellspacing="0" cellpadding="0" class="l">
+          <tr> 
+            <td colspan="4" class="bgb">
+		<%=localeTexts.getString("login.LargeApplicationName")%>
+        <td class="bgb">
+        5.3.9
+	    </td>
+          </tr>
+          <tr> 
+            <td width="6%" height="13">&nbsp;</td>
+            <td width="21%" height="13">&nbsp;</td>
+            <td width="32%" height="13">&nbsp;</td>
+            <td colspan="2" class="r" height="10">www.GaussSoft.com</td>
+          </tr>
+          <tr> 
+            <td colspan="5" height="322">
+		<img alt="" src="/activityreportdoc/images/logowhite.png" width="470" height="148">
+	    </td>
+          </tr>
+          <tr> 
+            <td colspan="5"> 
+              <table width="101%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="7%" height="25">&nbsp;</td>
+                  <!-- 
+                  <td width="30%" class="lt" height="25">
+		    <%=localeTexts.getString("login.DatabaseCaption")%>
+		  </td>
+                  -->
+                  <td width="30%" class="lt" height="25">&nbsp;</td>
+                  <td width="37%" height="25">&nbsp;
+                  <!--
+                    <input type="text" name="textfield3" tabindex="1" class="bg">
+                   -->
+                   </td>
+                  <td width="26%" height="25">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td width="7%" height="17">&nbsp;</td>
+                  <td width="30%" class="lt" height="17">
+		      <%=localeTexts.getString("login.LanguageChooserCaption")%>
+		  </td>
+                  <td width="37%" height="17"> 
+                    <select id="selectedlanguage" name="select" tabindex="2" class="bg" onChange="doChangeLanguage(document.forms['login']);return false;">
+			<option value='EN' <%=(language.equals("EN")?"selected='SELECTED'":"")%> >
+			    <%=localeTexts.getString("login.LanguageNameEnglish")%>
+			</option>
+			<option value='ES' <%=(language.equals("ES")?"selected='SELECTED'":"")%> >
+			    <%=localeTexts.getString("login.LanguageNameSpanish")%>
+			</option>
+                    </select>
+                  </td>
+                  <td width="26%" height="17">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td width="7%" height="5" class="m">&nbsp;</td>
+                  <td width="30%" height="5" class="m">&nbsp;</td>
+                  <td width="37%" height="5" class="m">&nbsp;</td>
+                  <td width="26%" height="5" class="m">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td width="7%" height="17">&nbsp;</td>
+                  <td width="30%" class="lt" height="23">
+		      <%=localeTexts.getString("login.UserName")%>
+		  </td>
+		  <td width="37%" height="17"> 
+		      <input type="text" name="username" tabindex="3" class="bg" value="<%=(request.getParameter("username")!=null?request.getParameter("username"):(request.getAttribute("userCode")!=null?request.getAttribute("userCode"):""))%>">
+                  </td>
+                  <td width="26%" height="17">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td width="7%" height="17">&nbsp;</td>
+                  <td width="30%" class="lt" height="17">
+		      <%=localeTexts.getString("login.PasswordCaption")%>
+		  </td>
+                  <td width="37%" height="17"> 
+                    <input type="password" name="password" tabindex="4" class="bg" AUTOCOMPLETE="off">
+                  </td>
+                  <td width="26%" height="17">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td height="55" colspan="5"> 
+              <div id="seccion" style="visibility:hidden"> 
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr> 
+                    <td width="7%" height="25">&nbsp;</td>
+                    <td width="30%" class="cp" height="25">
+			<%=localeTexts.getString("login.NewPassword")%>
+		    </td>
+                    <td width="37%" height="25"> 
+                      <input type="password" name="newpassword" tabindex="5" class="bg">
+                    </td>
+                    <td width="26%" height="25">&nbsp;</td>
+                  </tr>
+                  <tr> 
+                    <td width="7%" height="17">&nbsp;</td>
+                    <td width="30%" height="17" class="cp">
+			<%=localeTexts.getString("login.PasswordConfirmation")%>
+		    </td>
+                    <td width="37%" height="17"> 
+                      <input type="password" name="confirmation" tabindex="6" class="bg">
+                    </td>
+                    <td width="26%" height="17">&nbsp;</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+          	<td width="6%" class="cp" colspan="5" rowspan="1">
+          	<%
+			if ( ( eventResponse = (EventResponse)  request.getAttribute("response") ) == null ) 
+				out.print("<p class=\"login\">&nbsp;</p>");
+		 	else
+		 	{ 
+		 		if ( ( message = ( String ) eventResponse.getAttribute("message") ) != null )
+				out.print("<p class=\"login\">" + message + "</p>");
+				else
+				out.print("<p class=\"login\">&nbsp;</p>");
+			}
+			%>
+          	</td>
+          </tr>
+          <tr>
+            <td width="6%" height="5" class="m" >&nbsp;</td>
+            <td width="21%" height="5" class="m">&nbsp;</td>
+            <td width="32%" height="5" class="m">&nbsp;</td>
+            <td width="15%" height="5" class="m">&nbsp;</td>
+            <td width="26%" height="5" class="m">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td width="6%" class="bdg">&nbsp;</td>
+            <td width="21%" class="bdg">&nbsp;</td>
+            <td width="32%" class="bdg"> 
+              <div id="key" > 
+		    <%if( !authService.isActive( ) )
+		    {
+			%>
+		    <a href="#" tabindex="7" class="by" onClick="doocultar(document.getElementById('seccion'),document.getElementById('key'),document.forms['login'])">
+			<%=localeTexts.getString("login.ChangePasswordCommand")%>
+		    </a>
+		    <%}%>
+              </div>
+            </td>
+       		<td width="15%" class="bdg">
+       		<div align="center">
+		    <a href="Ingresar" tabindex="8" class="by" target="_self" href="#" onClick="doOk(document.forms['login']);return false;">
+			<%=localeTexts.getString("login.EnterCommand")%>
+		    </a></div>
+            </td>
+            <td width="26%" class="bdg">&nbsp;</td>
+          </tr>
+        </table>
+    </td>
+    <td width="1%">&nbsp;</td>
+  </tr>
+</table>
+  </form> 
+</body>
+</html>

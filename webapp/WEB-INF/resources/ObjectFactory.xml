@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : ObjectFactory.xml
+    Created on : 15/03/2017
+    Author     : JECM
+    Description: Contains the mapping of the classes to be instanced.
+-->
+<RegisteredClasses>
+<RegisteredClass name="StandardCommandProcessor" class="com.gausssoft.command.StandardCommandProcessor" />
+<RegisteredClass name="StandardCommandFactory" class="com.gausssoft.command.StandardCommandFactory" />                                     
+<RegisteredClass name="SessionFacade" class="com.gausssoft.service.SessionFacade"/>
+<RegisteredClass name="ConfSessionFacade" class="com.gausssoft.configuration.service.ConfigurationSessionFacade" />
+<RegisteredClass name="DatabaseManagerSessionFacade" class="com.gausssoft.databasemanager.service.DatabaseManagerSessionFacade" />
+<RegisteredClass name="SecuritySessionFacade" class="com.gausssoft.security.service.SecuritySessionFacade" />
+</RegisteredClasses>

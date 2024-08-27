@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!-- Copyright (c) 2002 by ObjectLearn. All Rights Reserved. -->
+<web-app>
+   <context-param>
+			<param-name>ApplicationName</param-name>
+            <param-value>ActivityRecordWeb</param-value>
+   </context-param>
+   
+   <context-param>
+			<param-name>ModelProcessor</param-name>
+            <param-value>activityrecord.engine.ActivityRecordEngine</param-value>
+   </context-param>
+   
+   <context-param>
+			<param-name>ModelProcessorFile</param-name>
+            <param-value>ActivityRecordEngine.xml</param-value>
+   </context-param>
+   
+   <context-param>
+			<param-name>StandardOutput</param-name>
+            <param-value>/home/super/webapps/logs/output.txt</param-value>
+   </context-param>
+   
+   <servlet>
+        <servlet-name>ActivityRecord</servlet-name>
+        <display-name>Registro de Actividades Web</display-name>
+        <description>Activity Record Web Application</description>
+        <servlet-class>common.web.MainServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ActivityReport</servlet-name>
+        <display-name>Registro de Actividades Web</display-name>
+        <description>Activity Record Web Application</description>
+        <servlet-class>com.gausssoft.web.ActivityReport</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ActivityRecord</servlet-name>
+        <url-pattern>/do/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ActivityReport</servlet-name>
+        <url-pattern>/go/*</url-pattern>
+    </servlet-mapping>
+    </web-app>
