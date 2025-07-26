@@ -129,8 +129,8 @@ public class Store {
         System.setOut(this.defaultStream);
       } 
     } catch (Exception e) {
-      String code = "CloudLicensingStore error";
-      System.out.println("CloudLicensingStore Exception: " + e.getMessage());
+      String code = "Store error";
+      System.out.println("Store Exception: " + e.getMessage());
       if (e.getMessage().contains("Database Management Exception"))
         code = "dberror"; 
       throw new ApplicationException(code);
